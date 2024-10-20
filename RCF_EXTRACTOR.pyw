@@ -101,7 +101,7 @@ def recreate_rcf(original_file_path, txt_names_path):
             messagebox.showerror("Error", "Unsupported file!")
             return
 
-    with open(new_rcf_path, 'r+b') as new_rcf:
+    with open(new_rcf_path, 'w+b') as new_rcf:
         # Escrever o cabeçalho
         new_rcf.write(header)
         log_message(f"New header successfully written to {new_rcf_path}")
