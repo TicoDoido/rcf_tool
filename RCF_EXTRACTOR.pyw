@@ -191,8 +191,8 @@ def extract_files(file_path):
                 names_offset = struct.unpack('>I', file.read(4))[0]
                 file.seek(4, os.SEEK_CUR)
 
-            log_message(f"Pointer Offset: {pointers_offset}, Size: {pointers_size}")
-            log_message(f"Names Offset: {names_offset}, Size: {names_size}")
+            log_message(f"Pointer Offset: {pointers_offset}")
+            log_message(f"Names Offset: {names_offset}")
 
             file.seek(56)
             
